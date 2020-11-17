@@ -4,6 +4,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import com.beebank.base.service.DemoAnnotationService;
 import com.beebank.base.service.DemoMethodService;
+import com.beebank.base.service.DemoPrototypeService;
+import com.beebank.base.service.DemoSingletoService;
 
 public class Main {
 	public static void main(String[] args) {
@@ -13,5 +15,13 @@ public class Main {
 		demo.add();
 		demoMethod.add();
 		aop.close();
+		AnnotationConfigApplicationContext scope = new AnnotationConfigApplicationContext(ScopeConfig.class);
+		DemoSingletoService de1 = scope.getBean(DemoSingletoService.class);
+		DemoPrototypeService ds1 = scope.getBean(DemoPrototypeService.class);
+		DemoSingletoService de2 = scope.getBean(DemoSingletoService.class);
+		DemoPrototypeService ds2 = scope.getBean(DemoPrototypeService.class);
+		System.out.println(de1.equals(de2));
+		System.out.println(ds1.equals(ds2));
+		
 	}
 }
