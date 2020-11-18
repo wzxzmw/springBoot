@@ -26,7 +26,7 @@ public class ElConfig {
 //	private Resource testFile;
 	@Value("www.baidu.com")
 	private Resource testUrl;
-	@Value("${book.autor}")
+	@Value("${book.name}")
 	private String bookname;
 	@Autowired
 	private Environment environment;
