@@ -14,7 +14,7 @@ public class Main {
 		DemoMethodService demoMethod = aop.getBean(DemoMethodService.class);
 		demo.add();
 		demoMethod.add();
-		aop.close();
+		
 		AnnotationConfigApplicationContext scope = new AnnotationConfigApplicationContext(ScopeConfig.class);
 		DemoSingletoService de1 = scope.getBean(DemoSingletoService.class);
 		DemoPrototypeService ds1 = scope.getBean(DemoPrototypeService.class);
@@ -22,6 +22,7 @@ public class Main {
 		DemoPrototypeService ds2 = scope.getBean(DemoPrototypeService.class);
 		System.out.println(de1.equals(de2));
 		System.out.println(ds1.equals(ds2));
-		
+		ElConfig elConfig=aop.getBean(ElConfig.class);
+		elConfig.outputResource();
 	}
 }
