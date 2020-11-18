@@ -46,6 +46,6 @@ public class Main {
 //			task.executeAsynTaskPlus(i);
 //		}
 		//ScheduledTaskSevice scheduledTaskSevice = acp.getBean(ScheduledTaskSevice.class);
-		acp.close();
+		//acp.close();
 	}
 }
