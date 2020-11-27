@@ -2,18 +2,16 @@ package com.beebank.base;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.beebank.base.mvc.MyMvcConfig;
-
 public class Main {
 	public static void main(String[] args) {
-//		AnnotationConfigApplicationContext aop = new AnnotationConfigApplicationContext(AopConfig.class);
+		AnnotationConfigApplicationContext aop = new AnnotationConfigApplicationContext(AopConfig.class);
 //		DemoAnnotationService demo = aop.getBean(DemoAnnotationService.class);
 //		DemoMethodService demoMethod = aop.getBean(DemoMethodService.class);
 //		demo.add();
 //		demoMethod.add();
 		
 //		
-		AnnotationConfigApplicationContext scope = new AnnotationConfigApplicationContext(MyMvcConfig.class);
+//		AnnotationConfigApplicationContext scope = new AnnotationConfigApplicationContext(MyMvcConfig.class);
 //		DemoSingletoService de1 = scope.getBean(DemoSingletoService.class);
 //		DemoPrototypeService ds1 = scope.getBean(DemoPrototypeService.class);
 //		DemoSingletoService de2 = scope.getBean(DemoSingletoService.class);
@@ -39,5 +37,6 @@ public class Main {
 //		}
 		//ScheduledTaskSevice scheduledTaskSevice = acp.getBean(ScheduledTaskSevice.class);
 		//acp.close();
+		
 	}
 }
