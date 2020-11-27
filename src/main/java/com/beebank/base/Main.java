@@ -37,6 +37,7 @@ public class Main {
 //		}
 		//ScheduledTaskSevice scheduledTaskSevice = acp.getBean(ScheduledTaskSevice.class);
 		//acp.close();
+		aop.close();
 		
 	}
 }
