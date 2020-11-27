@@ -1,4 +1,4 @@
-package com.beebank.base;
+package com.beebank.base.mvc;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
